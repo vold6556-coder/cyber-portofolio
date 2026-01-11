@@ -57,7 +57,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 
 ### Temuan Utama
 
-#### 1. Penggunaan Kredensial Default pada Aplikasi Web
+#### 1. Penggunaan Kredensial Default pada Aplikasi Web [`[See the Details]`](findings/Security_Misconfiguration/01.Default_Credentials.md)
 - **Deskripsi**: Login DVWA berhasil menggunakan kredensial default (admin/password)  
 - **Dampak**: Pengambilalihan akun administrator dan akses penuh ke aplikasi  
 - **CVSS**: **9.8 (Critical)**  
@@ -65,7 +65,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **Mitigasi**: Penggantian kredensial default, password policy kuat, rate limiting, account lockout, dan MFA
 #### “Bukti PoC dapat dilihat pada "[PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/01-poc_default-credentials.png)"
 
-#### 2. Improper Cloudflare Origin Server Configuration (Error 523)
+#### 2. Improper Cloudflare Origin Server Configuration (Error 523) [`[See the Details]`](findings/Security_Misconfiguration/02.Cloudflare_Origin_server_Configuration-Error_523.md)
 - **Deskripsi**: Cloudflare gagal menjangkau origin server  
 - **Dampak**: Gangguan availability dan potensi downtime  
 - **CVSS**: **7.5 (High)**
@@ -73,7 +73,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **Mitigasi**: Hardening origin server, firewall allowlist IP Cloudflare, dan verifikasi DNS  
 #### “Bukti PoC dapat dilihat pada "[PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
 
-#### 3. Directory Listing Aktif
+#### 3. Directory Listing Aktif [`[See the Details]`](findings/Security_Misconfiguration/03.Directory_Listing.md)
 - **Deskripsi**: Akses anonymous ke direktori internal  
 - **Dampak**: Kebocoran struktur internal dan bantuan reconnaissance  
 - **CVSS**: **5.3 (Medium)**
@@ -82,7 +82,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 #### “Bukti PoC dapat dilihat pada "[PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
 
 
-#### 4. Verbose Error Message / Debug Mode Aktif
+#### 4. Verbose Error Message / Debug Mode Aktif [`[See the Details]`](findings/Security_Misconfiguration/04.Verbose_Error_Message.md)
 - **Deskripsi**: Pesan error detail ditampilkan ke pengguna umum  
 - **Dampak**: Kebocoran informasi internal  
 - **CVSS**: **5.3 (Medium)**
@@ -92,7 +92,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 
 ---
 
-## 🧠 3. Dampak Risiko (Konseptual)
+## 🧠 3. Post-Exploitation & Dampak Risiko (Konseptual)
 
 ### Dampak Teknis 
 - Penggunaan kredensial default memungkinkan **pengambilalihan akun administrator**, yang memberikan akses penuh terhadap seluruh fungsi aplikasi web.
