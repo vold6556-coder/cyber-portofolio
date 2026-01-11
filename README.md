@@ -8,9 +8,10 @@ Tidak ada pengujian terhadap sistem produksi atau aset pihak ketiga tanpa izin t
 ---
 
 ## 👋 Pengantar Portofolio
-Halo, saya **Bela Agustina** seorang **student Cyber Security** yang berfokus pada **Red Team**.  
-
-Portofolio ini disusun untuk menunjukkan kemampuan saya dalam melakukan analisis keamanan secara **terstruktur, etis, dan profesional**. Fokus utama portofolio ini bukan hanya pada eksploitasi teknis, tetapi pada **pemahaman risiko, dampak, dan mitigasi yang realistis**, sebagaimana praktik dalam laporan penetration testing dan security assessment profesional.
+Halo, saya **Bela Agustina** seorang **student Cyber Security** yang berfokus pada **Red Team**. 
+Portofolio ini disusun untuk menunjukkan kemampuan saya dalam melakukan analisis keamanan secara **terstruktur, etis, dan profesional**. 
+Selama proses penyusunan portofolio ini, tantangan utama yang saya temui adalah memahami bagaimana kesalahan konfigurasi sederhana dapat berdampak besar ketika dikombinasikan dengan faktor manusia dan endpoint security. 
+Fokus utama portofolio ini bukan hanya pada eksploitasi teknis, tetapi pada **pemahaman risiko, dampak, dan mitigasi yang realistis**, sebagaimana praktik dalam laporan penetration testing dan security assessment profesional.
 
 ---
 
@@ -23,9 +24,13 @@ Selain itu, kesalahan konfigurasi infrastruktur dan aplikasi seperti **Cloudflar
 
 Sebagai pelengkap, analisis malware menunjukkan adanya indikasi **info-stealer** yang menargetkan data browser pengguna secara **silent**. Temuan ini menegaskan bahwa kontrol keamanan harus mencakup **aplikasi, endpoint, dan perilaku pengguna**. Seluruh rekomendasi difokuskan pada mitigasi yang **praktis, realistis, dan selaras dengan praktik industri**.
 
+Selama proses penyusunan portofolio ini, saya menemukan bahwa banyak risiko keamanan tidak selalu berasal dari teknik eksploitasi yang kompleks, melainkan dari kesalahan konfigurasi dasar dan perilaku pengguna di sisi endpoint. Pengalaman ini membantu saya memahami bagaimana celah yang terlihat sederhana dapat memiliki dampak signifikan ketika tidak dikelola dengan kontrol keamanan yang memadai.
+
+
 ---
 
 ## 🧭 Metodologi Umum
+Pendekatan ini dipilih untuk meniru alur kerja security assessment yang umum digunakan di industri, dengan pembatasan eksploitasi aktif agar tetap selaras dengan konteks pembelajaran dan etika akademik. Tahapan post-exploitation disajikan secara konseptual karena tujuan utama portofolio ini adalah pemahaman risiko dan dampaknya, bukan demonstrasi eksploitasi lanjutan.
 Pendekatan yang digunakan mengacu pada praktik umum security assessment dan penetration testing:
 
 1. **Reconnaissance & Scanning** – Identifikasi exposure awal dan potensi misconfiguration  
@@ -204,6 +209,7 @@ Pendekatan berbasis risiko, disertai mitigasi yang realistis dan berorientasi pa
 
 ## 🚀 Penutup
 Portofolio ini mencerminkan pendekatan saya dalam Cyber Security: **memahami risiko, dampak, dan solusi**, bukan sekadar mencari celah teknis. Portofolio ini merepresentasikan kesiapan saya untuk terlibat dalam aktivitas security assessment secara profesional.
+Melalui portofolio ini, saya menyadari bahwa peran seorang praktisi keamanan tidak hanya terbatas pada menemukan celah, tetapi juga pada kemampuan menjelaskan risiko dan merekomendasikan mitigasi yang dapat diterapkan secara realistis oleh organisasi.
 
 
 
