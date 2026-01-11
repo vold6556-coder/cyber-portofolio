@@ -38,8 +38,7 @@ Framework referensi: **OWASP Top 10**, **OWASP Testing Guide**, dan **CVSS v3.1*
 
 ---
 
-## 🔍 1. Reconnaissance & Scanning
-
+## 🔍 1. Reconnaissance & Scanning [`[See the Details]`](recon/Security_Misconfiguration.md)
 ### Tujuan
 Tahap reconnaissance dilakukan untuk mengidentifikasi **indikasi awal security misconfiguration**, seperti konfigurasi layanan, mekanisme error handling, serta exposure direktori atau infrastruktur pendukung.
 
@@ -52,7 +51,7 @@ Tahap ini difokuskan pada **pemahaman permukaan serangan**, bukan eksploitasi ag
 
 ---
 
-## 🧪 2. Technical Findings – Security Misconfiguration (Lab Terizin)
+## 🧪 2. Technical Findings – Security Misconfiguration (Lab Terizin) [`[See the Details]`](findings/Security_Misconfiguration)
 
 Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh temuan dikategorikan sebagai kesalahan konfigurasi dengan tingkat risiko yang bervariasi.
 
@@ -64,7 +63,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **CVSS**: **9.8 (Critical)**  
   `AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H`  
 - **Mitigasi**: Penggantian kredensial default, password policy kuat, rate limiting, account lockout, dan MFA
-#### “Bukti PoC dapat dilihat pada [PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/01-poc_default-credentials.png)”
+#### “Bukti PoC dapat dilihat pada "[PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/01-poc_default-credentials.png)"
 
 #### 2. Improper Cloudflare Origin Server Configuration (Error 523)
 - **Deskripsi**: Cloudflare gagal menjangkau origin server  
@@ -72,7 +71,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **CVSS**: **7.5 (High)**
   `AV:N / AC:L / PR:N / UI:N / S:U / C:N / I:N / A:H`
 - **Mitigasi**: Hardening origin server, firewall allowlist IP Cloudflare, dan verifikasi DNS  
-#### “Bukti PoC dapat dilihat pada [PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
+#### “Bukti PoC dapat dilihat pada "[PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
 
 #### 3. Directory Listing Aktif
 - **Deskripsi**: Akses anonymous ke direktori internal  
@@ -80,7 +79,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **CVSS**: **5.3 (Medium)**
   `AV:N /AC:L /PR:N /UI:N /S:U /C:L /I:N /A:N`
 - **Mitigasi**: Nonaktifkan directory listing, RBAC, audit repository publik  
-#### “Bukti PoC dapat dilihat pada [PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
+#### “Bukti PoC dapat dilihat pada "[PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
 
 
 #### 4. Verbose Error Message / Debug Mode Aktif
@@ -89,7 +88,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **CVSS**: **5.3 (Medium)**
   `AV:N / AC:L / PR:N / UI:N / S:U / C:L / I:N / A:N`
 - **Mitigasi**: Gunakan error message generik di production  
-#### “Bukti PoC dapat dilihat pada [PoC Verbose Error Message](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
+#### “Bukti PoC dapat dilihat pada "[PoC Verbose Error Message](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
 
 ---
 
@@ -124,7 +123,7 @@ Selain itu, keberadaan directory listing aktif, verbose error message, serta kes
 
 ---
 
-## 🔬 Malware Analysis (Sandbox-Based)
+## 🔬 Reconnaissance Malware Analysis (Sandbox-Based) [`[See the Details]`](recon/Malware_Analysis.md)
 
 Selain pengujian keamanan aplikasi web, portofolio ini juga mencakup analisis malware berbasis sandbox sebagai bagian dari pendekatan defensive security. Fokus analisis ini bukan pada pengembangan atau penyebaran malware, melainkan pada pemahaman perilaku ancaman di sisi endpoint dan potensi dampaknya terhadap pengguna maupun organisasi.
 Analisis dilakukan menggunakan VirusTotal dan Any.Run Sandbox terhadap sampel uji yang dieksekusi di lingkungan terisolasi.
@@ -135,7 +134,7 @@ Tools yang digunakan:
 
 ---
 
-### 🧪 Technical Finding 02  
+### 🧪 Technical Finding 02   [`[See the Details]`](findings/Malware_Analysis/Malware_analysis.md)
 **Indikasi Info-Stealer Malware pada Data Browser**
 
 Sampel uji malware menunjukkan perilaku **akses tidak sah terhadap data browser pengguna**. Malware berjalan secara **silent** tanpa notifikasi visual, dan terdeteksi mengakses direktori profil **Mozilla Firefox** yang menyimpan cookie dan data sesi autentikasi.
@@ -150,7 +149,7 @@ Perilaku ini konsisten dengan **Trojan / info-stealer ringan** yang berfokus pad
 - Akses ke direktori: "C:\Users\admin\AppData\Roaming\Mozilla\Firefox\Profiles\" 
 - Tidak ada indikasi visual di sisi pengguna
 
-#### “Bukti PoC dapat dilihat pada [PoC Malware Run](appendix/Screenshots_Sanitized/Malware_Analysis/poc_run-malware-anyrun.png)”
+#### “Bukti PoC dapat dilihat pada "[PoC Malware Run](appendix/Screenshots_Sanitized/Malware_Analysis/poc_run-malware-anyrun.png)”
 
 ---
 
@@ -197,7 +196,7 @@ Seluruh aktivitas dilakukan pada **lingkungan terisolasi dan terizin**. Dokument
 
 ---
 
-## Kesimpulan Akhir
+## Kesimpulan Akhir 
 
 Secara keseluruhan, assessment ini menunjukkan bahwa risiko keamanan sering kali muncul dari kombinasi kelemahan aplikasi, kesalahan konfigurasi infrastruktur, serta ancaman pada sisi endpoint. Temuan Security Misconfiguration dan Malware Analysis saling melengkapi dalam menggambarkan bagaimana celah sederhana dan perilaku pengguna dapat dimanfaatkan untuk menurunkan postur keamanan sistem secara signifikan.
 
@@ -205,3 +204,8 @@ Pendekatan berbasis risiko, disertai mitigasi yang realistis dan berorientasi pa
 
 ## 🚀 Penutup
 Portofolio ini mencerminkan pendekatan saya dalam Cyber Security: **memahami risiko, dampak, dan solusi**, bukan sekadar mencari celah teknis. Portofolio ini merepresentasikan kesiapan saya untuk terlibat dalam aktivitas security assessment secara profesional.
+
+
+
+## [See the Final Report](reports/final_report.md)
+---
