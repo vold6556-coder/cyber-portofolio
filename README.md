@@ -8,7 +8,7 @@ Tidak ada pengujian terhadap sistem produksi atau aset pihak ketiga tanpa izin t
 ---
 
 ## 👋 Pengantar Portofolio
-Halo, saya seorang **student Cyber Security** yang berfokus pada **analisis risiko keamanan**, **security misconfiguration**, serta **analisis malware berbasis sandbox**.  
+Halo, saya Bela Agustina seorang **student Cyber Security** yang berfokus pada **Red Team**.  
 
 Portofolio ini disusun untuk menunjukkan kemampuan saya dalam melakukan analisis keamanan secara **terstruktur, etis, dan profesional**. Fokus utama portofolio ini bukan hanya pada eksploitasi teknis, tetapi pada **pemahaman risiko, dampak, dan mitigasi yang realistis**, sebagaimana praktik dalam laporan penetration testing dan security assessment profesional.
 
