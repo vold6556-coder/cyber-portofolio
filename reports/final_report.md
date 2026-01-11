@@ -32,7 +32,7 @@ Framework referensi yang digunakan meliputi **OWASP Top 10**, **OWASP Testing Gu
 
 ---
 
-## 4. Reconnaissance & Scanning – Security Misconfiguration
+## 4. Reconnaissance & Scanning – Security Misconfiguration  [`[See the Details]`](recon/Security_Misconfiguration.md)
 
 ### Tujuan
 Tahap reconnaissance dilakukan untuk mengidentifikasi **indikasi awal security misconfiguration**, seperti konfigurasi layanan, mekanisme error handling, serta exposure direktori atau infrastruktur pendukung.
@@ -47,7 +47,7 @@ Tahap ini difokuskan pada pemahaman **attack surface**, bukan eksploitasi agresi
 
 ---
 
-### 4.1 Reconnaissance – Malware Analysis (Pre-Execution)
+### 4.1 Reconnaissance – Malware Analysis (Pre-Execution) [`[See the Details]`](recon/Malware_Analysis.md)
 
 Reconnaissance malware bertujuan untuk memperoleh **gambaran awal karakteristik ancaman** sebelum sampel dieksekusi di lingkungan sandbox. Pendekatan dilakukan secara **pasif dan non-intrusive**, dengan fokus pada klasifikasi ancaman dan penilaian risiko awal.
 
@@ -61,9 +61,9 @@ Hasil reconnaissance menunjukkan indikasi malware tipe **Trojan / Info-Stealer**
 
 ---
 
-## 5. Technical Findings – Security Misconfiguration
+## 5. Technical Findings – Security Misconfiguration  [`[See the Details]`](findings/Security_Misconfiguration)
 
-### 5.1 Penggunaan Kredensial Default pada Aplikasi Web
+### 5.1 Penggunaan Kredensial Default pada Aplikasi Web [`[See the Details]`](findings/Security_Misconfiguration/01.Default_Credentials.md)
 **Deskripsi:**  
 Login DVWA berhasil menggunakan kredensial default (admin/password).
 
@@ -71,13 +71,16 @@ Login DVWA berhasil menggunakan kredensial default (admin/password).
 Pengambilalihan akun administrator dan akses penuh ke aplikasi.
 
 **CVSS:** 9.8 (Critical)
+  `AV:N / AC:L / PR:N / UI:N / S:U / C:H / I:H / A:H`  
 
 **Mitigasi:**  
 Penggantian kredensial default, password policy kuat, rate limiting, account lockout, dan MFA.
 
+#### “Bukti PoC dapat dilihat pada "[PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/01-poc_default-credentials.png)"
+
 ---
 
-### 5.2 Improper Cloudflare Origin Server Configuration
+### 5.2 Improper Cloudflare Origin Server Configuration  [`[See the Details]`](findings/Security_Misconfiguration/02.Cloudflare_Origin_server_Configuration-Error_523.md)
 **Deskripsi:**  
 Cloudflare gagal menjangkau origin server akibat kesalahan konfigurasi backend.
 
@@ -85,13 +88,16 @@ Cloudflare gagal menjangkau origin server akibat kesalahan konfigurasi backend.
 Gangguan availability layanan dan potensi downtime.
 
 **CVSS:** 7.5 (High)
+  `AV:N / AC:L / PR:N / UI:N / S:U / C:N / I:N / A:H`
 
 **Mitigasi:**  
 Hardening origin server, allowlist IP Cloudflare, dan verifikasi DNS.
 
+#### “Bukti PoC dapat dilihat pada "[PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
+
 ---
 
-### 5.3 Directory Listing Aktif
+### 5.3 Directory Listing Aktif  [`[See the Details]`](findings/Security_Misconfiguration/03.Directory_Listing.md)
 **Deskripsi:**  
 Akses anonymous ke direktori internal dengan tampilan “Index of /”.
 
@@ -99,13 +105,16 @@ Akses anonymous ke direktori internal dengan tampilan “Index of /”.
 Kebocoran struktur internal dan dukungan reconnaissance lanjutan.
 
 **CVSS:** 5.3 (Medium)
+  `AV:N /AC:L /PR:N /UI:N /S:U /C:L /I:N /A:N`
 
 **Mitigasi:**  
 Nonaktifkan directory listing dan hardening konfigurasi server.
 
+#### “Bukti PoC dapat dilihat pada "[PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
+
 ---
 
-### 5.4 Verbose Error Message / Debug Mode Aktif
+### 5.4 Verbose Error Message / Debug Mode Aktif [`[See the Details]`](findings/Security_Misconfiguration/04.Verbose_Error_Message.md)
 **Deskripsi:**  
 Aplikasi menampilkan pesan error detail ke pengguna umum.
 
@@ -113,13 +122,16 @@ Aplikasi menampilkan pesan error detail ke pengguna umum.
 Kebocoran informasi internal (path file, struktur aplikasi).
 
 **CVSS:** 5.3 (Medium)
+  `AV:N / AC:L / PR:N / UI:N / S:U / C:L / I:N / A:N`
 
 **Mitigasi:**  
 Nonaktifkan display error di production dan gunakan error message generik.
 
+#### “Bukti PoC dapat dilihat pada "[PoC Verbose Error Message](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
+
 ---
 
-## 6. Technical Findings – Malware Analysis
+## 6. Technical Findings – Malware Analysis  [`[See the Details]`](findings/Malware_Analysis/Malware_analysis.md)
 
 ### 6.1 Indikasi Info-Stealer Malware pada Data Browser
 **Deskripsi:**  
@@ -136,6 +148,8 @@ Analisis sandbox menunjukkan malware berjalan secara silent dan mengakses direkt
 - Account takeover
 
 **CVSS Estimasi:** 7.1 (High)
+
+#### “Bukti PoC dapat dilihat pada "[PoC Malware Run](appendix/Screenshots_Sanitized/Malware_Analysis/poc_run-malware-anyrun.png)”
 
 ---
 
