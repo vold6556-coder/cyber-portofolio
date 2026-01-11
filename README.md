@@ -71,14 +71,14 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **Dampak**: Gangguan availability dan potensi downtime  
 - **CVSS**: **7.5 (High)**  
 - **Mitigasi**: Hardening origin server, firewall allowlist IP Cloudflare, dan verifikasi DNS  
-#### “Bukti PoC dapat dilihat pada [PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
+#### “Bukti PoC dapat dilihat pada [PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
 
 #### 3. Directory Listing Aktif
 - **Deskripsi**: Akses anonymous ke direktori internal  
 - **Dampak**: Kebocoran struktur internal dan bantuan reconnaissance  
 - **CVSS**: **5.3 (Medium)**  
 - **Mitigasi**: Nonaktifkan directory listing, RBAC, audit repository publik  
-#### “Bukti PoC dapat dilihat pada [PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
+#### “Bukti PoC dapat dilihat pada [PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
 
 
 #### 4. Verbose Error Message / Debug Mode Aktif
@@ -86,7 +86,7 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 - **Dampak**: Kebocoran informasi internal  
 - **CVSS**: **5.3 (Medium)**  
 - **Mitigasi**: Gunakan error message generik di production  
-#### “Bukti PoC dapat dilihat pada [PoC Default Credentials](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
+#### “Bukti PoC dapat dilihat pada [PoC Verbose Error Message](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
 
 ---
 
@@ -135,7 +135,7 @@ Perilaku ini konsisten dengan **Trojan / info-stealer ringan** yang berfokus pad
 - Akses ke direktori: "C:\Users\admin\AppData\Roaming\Mozilla\Firefox\Profiles\" 
 - Tidak ada indikasi visual di sisi pengguna
 
-#### “Bukti PoC dapat dilihat pada [PoC Default Credentials](appendix/Screenshots_Sanitized/Malware_Analysis/poc_run-malware-anyrun.png)”
+#### “Bukti PoC dapat dilihat pada [PoC Malware Run](appendix/Screenshots_Sanitized/Malware_Analysis/poc_run-malware-anyrun.png)”
 
 ---
 
