@@ -69,14 +69,16 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 #### 2. Improper Cloudflare Origin Server Configuration (Error 523)
 - **Deskripsi**: Cloudflare gagal menjangkau origin server  
 - **Dampak**: Gangguan availability dan potensi downtime  
-- **CVSS**: **7.5 (High)**  
+- **CVSS**: **7.5 (High)**
+  `AV:N / AC:L / PR:N / UI:N / S:U / C:N / I:N / A:H`
 - **Mitigasi**: Hardening origin server, firewall allowlist IP Cloudflare, dan verifikasi DNS  
 #### “Bukti PoC dapat dilihat pada [PoC Cloudflare-Error 523](appendix/Screenshots_Sanitized/Security_Misconfiguration/02-poc_cloudflare-error523.png)”
 
 #### 3. Directory Listing Aktif
 - **Deskripsi**: Akses anonymous ke direktori internal  
 - **Dampak**: Kebocoran struktur internal dan bantuan reconnaissance  
-- **CVSS**: **5.3 (Medium)**  
+- **CVSS**: **5.3 (Medium)**
+  `AV:N /AC:L /PR:N /UI:N /S:U /C:L /I:N /A:N`
 - **Mitigasi**: Nonaktifkan directory listing, RBAC, audit repository publik  
 #### “Bukti PoC dapat dilihat pada [PoC Directory Listing](appendix/Screenshots_Sanitized/Security_Misconfiguration/03-poc_directory-listing.png)”
 
@@ -84,7 +86,8 @@ Bagian ini disesuaikan dengan **Laporan Security Misconfiguration**. Seluruh tem
 #### 4. Verbose Error Message / Debug Mode Aktif
 - **Deskripsi**: Pesan error detail ditampilkan ke pengguna umum  
 - **Dampak**: Kebocoran informasi internal  
-- **CVSS**: **5.3 (Medium)**  
+- **CVSS**: **5.3 (Medium)**
+  `AV:N / AC:L / PR:N / UI:N / S:U / C:L / I:N / A:N`
 - **Mitigasi**: Gunakan error message generik di production  
 #### “Bukti PoC dapat dilihat pada [PoC Verbose Error Message](appendix/Screenshots_Sanitized/Security_Misconfiguration/04-poc_verbose-error-msg.png)”
 
