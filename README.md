@@ -170,5 +170,65 @@ Seluruh aktivitas dilakukan pada **lingkungan terisolasi dan terizin**. Dokument
 
 ---
 
+## Dampak Teknis & Bisnis
+
+Bagian ini menjelaskan dampak teknis dan dampak bisnis dari temuan utama yang diidentifikasi pada assessment, mencakup **Security Misconfiguration** pada aplikasi web dan **Info-Stealer Malware** pada endpoint pengguna.
+
+---
+
+### Dampak Teknis – Security Misconfiguration
+- Penggunaan kredensial default memungkinkan **pengambilalihan akun administrator**, yang memberikan akses penuh terhadap seluruh fungsi aplikasi web.
+- Directory listing aktif dan verbose error message mempercepat proses reconnaissance dengan mengungkap **struktur direktori, path file, dan informasi internal aplikasi**.
+- Kesalahan konfigurasi Cloudflare origin server berpotensi menyebabkan **gangguan availability layanan** dan membuka peluang akses langsung ke origin server tanpa proteksi optimal.
+- Kombinasi temuan dapat dimanfaatkan untuk **chaining attack**, yang meningkatkan risiko kompromi sistem secara menyeluruh.
+
+---
+
+### Dampak Bisnis – Security Misconfiguration
+- **Downtime layanan** dapat mengganggu operasional bisnis dan menurunkan tingkat kepercayaan pengguna.
+- Risiko **kebocoran data dan pengambilalihan sistem** dapat memicu konsekuensi hukum dan kepatuhan.
+- Penurunan **reputasi organisasi** akibat insiden keamanan yang seharusnya dapat dicegah melalui konfigurasi dasar yang tepat.
+- Peningkatan **biaya incident response dan remediasi** akibat lemahnya kontrol keamanan awal.
+
+---
+
+### Dampak Teknis – Malware Analysis (Info-Stealer)
+- Pencurian cookie dan data sesi autentikasi memungkinkan terjadinya **session hijacking tanpa memerlukan kredensial pengguna**.
+- Malware berjalan secara **silent di background**, sehingga sulit terdeteksi tanpa kontrol keamanan endpoint berbasis perilaku.
+- Data browser yang dikumpulkan dapat digunakan untuk **akses tidak sah lanjutan** ke aplikasi internal maupun eksternal.
+- Endpoint yang terinfeksi berpotensi menjadi **initial access vector** untuk serangan yang lebih kompleks di lingkungan organisasi.
+
+---
+
+### Dampak Bisnis – Malware Analysis (Info-Stealer)
+- **Kompromi akun pengguna** meningkatkan risiko kebocoran data dan penyalahgunaan akses sistem.
+- Potensi **fraud, impersonasi, dan penyalahgunaan akun** berdampak langsung pada kepercayaan pengguna dan mitra bisnis.
+- Kerugian operasional akibat kebutuhan **forensik digital, pemulihan sistem, dan peningkatan kontrol keamanan endpoint** pasca insiden.
+- Penurunan **kepercayaan pengguna** terhadap keamanan sistem dan layanan organisasi.
+
+---
+
+## Kesimpulan Temuan – Security Misconfiguration
+
+Berdasarkan hasil assessment, temuan kategori **Security Misconfiguration** menunjukkan bahwa kelemahan konfigurasi dasar dapat menimbulkan risiko keamanan yang signifikan, bahkan tanpa memerlukan teknik eksploitasi yang kompleks. Penggunaan kredensial default menjadi faktor risiko paling kritis karena memungkinkan pengambilalihan sistem secara penuh dalam waktu singkat.
+
+Selain itu, keberadaan directory listing aktif, verbose error message, serta kesalahan konfigurasi infrastruktur memperluas permukaan serangan dan mempermudah proses reconnaissance oleh pihak yang tidak berwenang. Temuan ini menegaskan bahwa pengamanan konfigurasi dasar dan penerapan prinsip hardening merupakan fondasi utama dalam menjaga keamanan aplikasi web.
+
+---
+
+## Kesimpulan Temuan – Malware Analysis (Info-Stealer)
+
+Hasil analisis malware berbasis sandbox menunjukkan bahwa ancaman terhadap keamanan sistem tidak selalu bersifat destruktif atau terlihat secara langsung oleh pengguna. Sampel uji malware yang dianalisis memiliki karakteristik **info-stealer**, dengan fokus pada pengumpulan data browser dan sesi autentikasi secara silent.
+
+Meskipun tidak ditemukan aktivitas perusakan sistem, potensi penyalahgunaan data yang dikumpulkan—seperti session hijacking dan pengambilalihan akun—menjadikan ancaman ini relevan dan berbahaya, khususnya pada endpoint dengan kontrol keamanan minimal. Temuan ini menekankan pentingnya pendekatan keamanan endpoint berbasis perilaku dan peningkatan kesadaran pengguna terhadap risiko eksekusi file yang tidak terverifikasi.
+
+---
+
+## Kesimpulan Akhir
+
+Secara keseluruhan, assessment ini menunjukkan bahwa risiko keamanan sering kali muncul dari kombinasi kelemahan aplikasi, kesalahan konfigurasi infrastruktur, serta ancaman pada sisi endpoint. Temuan Security Misconfiguration dan Malware Analysis saling melengkapi dalam menggambarkan bagaimana celah sederhana dan perilaku pengguna dapat dimanfaatkan untuk menurunkan postur keamanan sistem secara signifikan.
+
+Pendekatan berbasis risiko, disertai mitigasi yang realistis dan berorientasi pada praktik industri, menjadi kunci dalam meningkatkan ketahanan sistem terhadap ancaman keamanan. Laporan ini diharapkan dapat merepresentasikan pemahaman menyeluruh terhadap proses security assessment yang tidak hanya berfokus pada aspek teknis, tetapi juga mempertimbangkan dampak operasional dan bisnis secara holistik.
+
 ## 🚀 Penutup
 Portofolio ini mencerminkan pendekatan saya dalam Cyber Security: **memahami risiko, dampak, dan solusi**, bukan sekadar mencari celah teknis. Portofolio ini merepresentasikan kesiapan saya untuk terlibat dalam aktivitas security assessment secara profesional.
