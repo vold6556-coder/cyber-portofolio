@@ -1,0 +1,23 @@
+# Finding 02 – Improper Cloudflare Origin Server Configuration (Error 523)
+
+## Deskripsi
+Aplikasi DVWA diakses melalui Cloudflare sebagai reverse proxy, namun Cloudflare tidak dapat menjangkau origin server dan menampilkan Error 523 (Origin is unreachable).
+
+## Dampak
+- Gangguan availability aplikasi
+- Potensi downtime berkepanjangan
+- Menunjukkan lemahnya kontrol konfigurasi infrastruktur
+
+## CVSS v3.1
+**Score:** 7.5 (High)  
+**Vector:** AV:N / AC:L / PR:N / UI:N / S:U / C:N / I:N / A:H
+
+## Proof of Concept (Disanitasi)
+- Tampilan Cloudflare Error 523 saat mengakses aplikasi
+- Bukti visual disimpan di appendix
+
+## Mitigasi
+- Pastikan web server berjalan dan listen pada 0.0.0.0
+- Buka port 80 dan 443 untuk IP Cloudflare
+- Verifikasi DNS A Record
+- Terapkan allowlist IP Cloudflare pada firewall origin
