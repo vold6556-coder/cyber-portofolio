@@ -19,7 +19,7 @@ Portofolio ini mendokumentasikan hasil **security assessment berbasis risiko** y
 
 Ditemukan beberapa temuan dengan tingkat risiko **Medium hingga Critical** yang berpotensi berdampak signifikan terhadap keamanan aplikasi dan endpoint pengguna. Risiko paling kritis berasal dari **penggunaan kredensial default**, yang memungkinkan pengambilalihan sistem secara penuh.
 
-Selain itu, kesalahan konfigurasi infrastruktur dan aplikasi—seperti **Cloudflare origin misconfiguration**, **directory listing aktif**, dan **verbose error message**—memperluas permukaan serangan dan mempermudah eksploitasi lanjutan.
+Selain itu, kesalahan konfigurasi infrastruktur dan aplikasi seperti **Cloudflare origin misconfiguration**, **directory listing aktif**, dan **verbose error message** memperluas permukaan serangan dan mempermudah eksploitasi lanjutan.
 
 Sebagai pelengkap, analisis malware menunjukkan adanya indikasi **info-stealer** yang menargetkan data browser pengguna secara **silent**. Temuan ini menegaskan bahwa kontrol keamanan harus mencakup **aplikasi, endpoint, dan perilaku pengguna**. Seluruh rekomendasi difokuskan pada mitigasi yang **praktis, realistis, dan selaras dengan praktik industri**.
 
