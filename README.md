@@ -104,9 +104,10 @@ Bagian ini bersifat **analisis konseptual** dan tidak memuat eksploitasi lanjuta
 
 ---
 
-## 🔬 5. Malware Analysis (Sandbox-Based)
+## 🔬 Malware Analysis (Sandbox-Based)
 
-Analisis malware dilakukan untuk memahami **perilaku ancaman di sisi endpoint**, bukan untuk pengembangan atau penyebaran malware.
+Selain pengujian keamanan aplikasi web, portofolio ini juga mencakup analisis malware berbasis sandbox sebagai bagian dari pendekatan defensive security. Fokus analisis ini bukan pada pengembangan atau penyebaran malware, melainkan pada pemahaman perilaku ancaman di sisi endpoint dan potensi dampaknya terhadap pengguna maupun organisasi.
+Analisis dilakukan menggunakan VirusTotal dan Any.Run Sandbox terhadap sampel uji yang dieksekusi di lingkungan terisolasi.
 
 Tools yang digunakan:
 - **VirusTotal**
